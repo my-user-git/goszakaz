@@ -50,38 +50,38 @@
         </section>
         <div class="main-content container">
             <aside class="main-content__aside">
-                <h2 class="aside__h2">
+                <h2 class="aside-h2">
                     Популярные новости
                 </h2>
-                <ul class="aside__list">
-                    <li class="aside__item">
-                        <a class="aside__link" href="">
-                            <h3 class="aside__h3">ITAM&SAMDay – самая настоящая удача!</h3>
-                            <p class="aside__date">13 дек 2020</p>
+                <ul class="aside-list">
+                    <li class="aside-list__item">
+                        <a class="aside-list__link" href="">
+                            <h3 class="aside-list__h3">ITAM&SAMDay – самая настоящая удача!</h3>
+                            <p class="aside-list__date">13 дек 2020</p>
                         </a>
                     </li>
-                    <li class="aside__item">
-                        <a class="aside__link" href="">
-                            <h3 class="aside__h3">Секреты лицензирования. Всё, что вы хотели знать про Microsoft, SAP и
+                    <li class="aside-list__item">
+                        <a class="aside-list__link" href="">
+                            <h3 class="aside-list__h3">Секреты лицензирования. Всё, что вы хотели знать про Microsoft, SAP и
                                 Oracle, но не знали, у кого спросить ...</h3>
-                            <p class="aside__date">10 дек 2020</p>
+                            <p class="aside-list__date">10 дек 2020</p>
                         </a>
                     </li>
-                    <li class="aside__item">
-                        <a class="aside__link" href="">
-                            <h3 class="aside__h3">Менеджмент XXI века. Надо ли готовиться к изменениям или мы давно уже
+                    <li class="aside-list__item">
+                        <a class="aside-list__link" href="">
+                            <h3 class="aside-list__h3">Менеджмент XXI века. Надо ли готовиться к изменениям или мы давно уже
                                 должны были измениться?</h3>
-                            <p class="aside__date">5 дек 2020</p>
+                            <p class="aside-list__date">5 дек 2020</p>
                         </a>
                     </li>
                 </ul>
-                <form action="" class="aside__mailing">
-                    <label class="aside__label" for="email">Подписка на рассылку</label>
-                    <input class="aside__input" type="email" name="email" id="email" value="Email@gmail.com"
+                <form action="#" class="aside-mailing">
+                    <label class="aside-mailing__label" for="email">Подписка на рассылку</label>
+                    <input class="aside-mailing__input" type="email" name="email" id="email" value="Email@gmail.com"
                         onfocus="this.value=''">
-                    <button class="aside__button" type="submit">
+                    <button class="aside-mailing__button" type="submit">
                         Подписаться
-                        <svg class="aside__button-svg">
+                        <svg class="aside-mailing__button-svg">
                             <use xlink:href="./img/svg/sprite.svg#arrow-form"></use>
                         </svg>
                     </button>
@@ -180,9 +180,12 @@
                 </section>
                 <button class="main-content__button">
                     Показать ещё 6
+                    <svg class="main-content__button-svg">
+                        <use xlink:href="./img/svg/sprite.svg#more"></use>
+                    </svg>
                 </button>
             </article>
-            <section class="pagination">
+            <div class="pagination">
                 <ul class="pagination__list">
                     <li class="pagination__item">
                         <button class="pagination__link active">1</button>
@@ -211,7 +214,7 @@
                         </button>
                     </li>
                 </ul>
-            </section>
+            </div>
         </div>
     </main>
     <footer class="footer">

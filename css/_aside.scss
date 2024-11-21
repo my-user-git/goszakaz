@@ -1,7 +1,7 @@
 /* aside */
 
 .aside {
-    &__h2 {
+    &-h2 {
         margin-bottom: 30px;
         font-family: var(--font-book), var(--font-standart);
         font-size: 24px;
@@ -10,7 +10,7 @@
         color: var(--dark-22);
     }
 
-    &__list {
+    &-list {
         display: flex;
         flex-direction: column;
         row-gap: 20px;
@@ -21,45 +21,50 @@
             grid-template-columns: repeat(3, 1fr);
             column-gap: 20px;
         }
-    }
 
-    &__h3 {
-        margin-bottom: 10px;
-        font-family: var(--font-book), var(--font-standart);
-        font-size: 18px;
-        line-height: normal;
-        font-weight: 400;
-        color: var(--dark-22);
-        transition: color ease-in-out .5s;
-
-        @media (max-width: 1024px) {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
         }
 
-        &:hover,
-        &:focus,
-        &:active {
-            color: var(--blue-dd);
-        }
-    }
+        &__h3 {
+            margin-bottom: 10px;
+            font-family: var(--font-book), var(--font-standart);
+            font-size: 18px;
+            line-height: normal;
+            font-weight: 400;
+            color: var(--dark-22);
+            transition: color ease-in-out .5s;
 
-    &__date {
-        font-family: var(--font-book), var(--font-standart);
-        font-size: 18px;
-        line-height: normal;
-        font-weight: 400;
-        color: var(--text-grey-4);
+            @media (max-width: 1024px) {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: var(--blue-dd);
+            }
+        }
+
+        &__date {
+            font-family: var(--font-book), var(--font-standart);
+            font-size: 18px;
+            line-height: normal;
+            font-weight: 400;
+            color: var(--text-grey-4);
+        }
     }
 }
 
 /* form */
 
 .aside {
-    &__mailing {
+    &-mailing {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -77,93 +82,99 @@
             gap: 20px;
             margin-bottom: 40px;
         }
-    }
 
-    &__label {
-        margin-bottom: 9px;
-        font-family: var(--font-medium), var(--font-standart);
-        font-size: 24px;
-        line-height: normal;
-        font-weight: 500;
-        color: var(--dark-22);
-
-        @media (max-width: 1024px) {
-            grid-area: label;
-        }
-    }
-
-    &__input {
-        position: relative;
-        padding: 13px 0 13px 0;
-        font-family: var(--font-book), var(--font-standart);
-        font-size: 18px;
-        line-height: normal;
-        font-weight: 400;
-        color: var(--text-grey-4);
-        border-radius: 20px;
-        background-color: var(--grey-f5);
-        transition: background-color ease-in-out .5s, border ease-in-out .5s;
-
-        @media (max-width: 1024px) {
-            grid-area: input;
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
         }
 
-        &::after {
-            @include after;
-        }
-
-        &:focus {
+        &__label {
+            margin-bottom: 9px;
+            font-family: var(--font-medium), var(--font-standart);
+            font-size: 24px;
+            line-height: normal;
+            font-weight: 500;
             color: var(--dark-22);
 
-            &::after {
-                border: 1.50px solid #2f2222;
+            @media (max-width: 1024px) {
+                grid-area: label;
             }
         }
 
-        &:hover {
-            background-color: var(--grey-f9);
-        }
-    }
+        &__input {
+            position: relative;
+            max-width: 100%;
+            padding: 13px 0 13px 30px;
+            font-family: var(--font-book), var(--font-standart);
+            font-size: 18px;
+            line-height: normal;
+            font-weight: 400;
+            color: var(--text-grey-4);
+            border-radius: 20px;
+            background-color: var(--grey-f5);
+            transition: background-color ease-in-out .5s, border ease-in-out .5s;
 
-    &__button {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 13px 0 13px 0;
-        font-family: var(--font-book), var(--font-standart);
-        font-size: 18px;
-        line-height: normal;
-        font-weight: 400;
-        color: var(--white);
-        border-radius: 20px;
-        background-color: var(--blue-dd);
-        transition: background-color ease-in-out .5s, border ease-in-out .5s;
-
-        @media (max-width: 1024px) {
-            grid-area: button;
-        }
-
-        &::after {
-            @include after;
-        }
-
-        &:hover {
-            background-color: var(--blue-d8);
-        }
-
-        &:focus {
-            background-color: var(--blue-d8);
+            @media (max-width: 1024px) {
+                grid-area: input;
+            }
 
             &::after {
-                border: 1.50px solid #2f2222;
+                @include after;
+            }
+
+            &:focus {
+                color: var(--dark-22);
+
+                &::after {
+                    border: 1.50px solid #2f2222;
+                }
+            }
+
+            &:hover {
+                background-color: var(--grey-f9);
             }
         }
 
-        &-svg {
-            width: 20px;
-            height: 19px;
-            margin-left: 10px;
+        &__button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 0 13px 0;
+            font-family: var(--font-book), var(--font-standart);
+            font-size: 18px;
+            line-height: normal;
+            font-weight: 400;
+            color: var(--white);
+            border-radius: 20px;
+            background-color: var(--blue-dd);
+            transition: background-color ease-in-out .5s, border ease-in-out .5s;
+
+            @media (max-width: 1024px) {
+                grid-area: button;
+            }
+
+            &::after {
+                @include after;
+            }
+
+            &:hover {
+                background-color: var(--blue-d8);
+            }
+
+            &:focus {
+                background-color: var(--blue-d8);
+
+                &::after {
+                    border: 1.50px solid #2f2222;
+                }
+            }
+
+            &-svg {
+                width: 20px;
+                height: 19px;
+                margin-left: 10px;
+            }
         }
     }
 }

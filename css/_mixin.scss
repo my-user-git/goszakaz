@@ -1,6 +1,7 @@
 @mixin section-h2 {
     grid-area: h2;
     justify-self: flex-start;
+    text-align: center;
     margin-bottom: 10px;
     padding: 8px 16px;
     font-family: var(--font-book), var(--font-standart);
