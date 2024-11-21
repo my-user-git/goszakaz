@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест Морозов</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content container">
+            <a class="header-logo" href="" title="На главную">
+                <svg class="header-logo__svg">
+                    <use xlink:href="./img/svg/sprite.svg#logo"></use>
+                </svg>
+            </a>
+            <nav class="header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="">Главная</a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="">О нас</a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="">Контакты</a>
+                    </li>
+                    <li class="header-nav__item">
+                        <button class="header-nav__search">Поиск</button>
+                    </li>
+                </ul>
+            </nav>
+            <a class="header-phone" href="tel:+798788787">
+                <svg class="header-phone__svg">
+                    <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                </svg>
+                +7 (987) 887-87</a>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <picture class="hero-picture" tabindex="0">
+                <source srcset="./img/hero-bg-320.png" media="(max-width:320px)">
+                <source srcset="./img/hero-bg-1024.png" media="(max-width:1024px)">
+                <img class="hero-picture__img" src="./img/hero-bg.png" alt="Картинка вверху">
+            </picture>
+        </section>
+        <div class="main-content container">
+            <aside class="main-content__aside">
+                <h2 class="aside__h2">
+                    Популярные новости
+                </h2>
+                <ul class="aside__list">
+                    <li class="aside__item">
+                        <a class="aside__link" href="">
+                            <h3 class="aside__h3">ITAM&SAMDay – самая настоящая удача!</h3>
+                            <p class="aside__date">13 дек 2020</p>
+                        </a>
+                    </li>
+                    <li class="aside__item">
+                        <a class="aside__link" href="">
+                            <h3 class="aside__h3">Секреты лицензирования. Всё, что вы хотели знать про Microsoft, SAP и
+                                Oracle, но не знали, у кого спросить ...</h3>
+                            <p class="aside__date">10 дек 2020</p>
+                        </a>
+                    </li>
+                    <li class="aside__item">
+                        <a class="aside__link" href="">
+                            <h3 class="aside__h3">Менеджмент XXI века. Надо ли готовиться к изменениям или мы давно уже
+                                должны были измениться?</h3>
+                            <p class="aside__date">5 дек 2020</p>
+                        </a>
+                    </li>
+                </ul>
+                <form action="" class="aside__mailing">
+                    <label class="aside__label" for="email">Подписка на рассылку</label>
+                    <input class="aside__input" type="email" name="email" id="email" value="Email@gmail.com"
+                        onfocus="this.value=''">
+                    <button class="aside__button" type="submit">
+                        Подписаться
+                        <svg class="aside__button-svg">
+                            <use xlink:href="./img/svg/sprite.svg#arrow-form"></use>
+                        </svg>
+                    </button>
+                </form>
+            </aside>
+            <article class="main-content__article">
+                <section class="section-one">
+                    <h2 class="section-one__h2">Категория 1</h2>
+                    <p class="section-one__date">13 дек 2020</p>
+                    <h3 class="section-one__h3">Управление ИТ-активами – скучная рутина или творческая задача?</h3>
+                    <p class="section-one__desc">
+                        Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по ИТ-мощностям в
+                        крупной компании периодически готовил толстенный отчёт руководству. В очередной раз он не принёс
+                        отчёт, решив проверить, нужен ли он вообще.
+                    </p>
+                </section>
+                <section class="section-two">
+                    <div class="section-two__left">
+                        <h2 class="section-two__h2">Категория 1</h2>
+                        <p class="section-two__date">13 дек 2020</p>
+                        <h3 class="section-two__h3">Управление ИТ-активами – скучная рутина или творческая задача?</h3>
+                        <p class="section-two__desc">
+                            Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по
+                            ИТ-мощностям в
+                            крупной компании периодически готовил толстенный отчёт руководству. В очередной раз он не
+                            принёс
+                            отчёт, решив проверить, нужен ли он вообще.
+                        </p>
+                    </div>
+                    <div class="section-two__right">
+                        <h2 class="section-two__h2 section-two__h2_right">Категория 1</h2>
+                        <h3 class="section-two__h3 section-two__h3_right">ITAM&SAMDay – самая настоящая удача!</h3>
+                        <p class="section-two__date section-two__date_right">13 дек 2020</p>
+                    </div>
+                </section>
+                <section class="section-three">
+                    <div class="section-three__left">
+                        <h2 class="section-three__h2 section-three__h2_left">Очень длинная категория 2</h2>
+                        <h3 class="section-three__h3 section-three__h3_left">Управление ИТ-активами – скучная рутина или
+                            творческая задача?
+                        </h3>
+                        <p class="section-three__date section-three__date_left">13 дек 2020</p>
+                    </div>
+                    <div class="section-three__top">
+                        <h2 class="section-three__h2">Категория 1</h2>
+                        <h3 class="section-three__h3">Управление ИТ-активами – скучная рутина
+                            или творческая задача слово слово и еще длинное слово после чего ...</h3>
+                        <p class="section-three__date">13 дек 2020</p>
+                    </div>
+                    <div class="section-three__bottom">
+                        <h2 class="section-three__h2">Категория 1</h2>
+                        <h3 class="section-three__h3">УITAM&SAMDay – самая настоящая удача!
+                        </h3>
+                        <p class="section-three__date">13 дек 2020</p>
+                    </div>
+                </section>
+                <section class="section-four">
+                    <div class="section-four__left">
+                        <h2 class="section-four__h2">Категория 1</h2>
+                        <p class="section-four__date">13 дек 2020</p>
+                        <h3 class="section-four__h3">Управление ИТ-активами – скучная рутина или творческая задача?</h3>
+                        <p class="section-four__desc">
+                            Размышляя об управлении ИТ-активами, я вспомнил один учебный пример. Менеджер по
+                            ИТ-мощностям в
+                            крупной компании периодически готовил толстенный отчёт руководству. В очередной раз он не
+                            принёс
+                            отчёт, решив проверить, нужен ли он вообще.
+                        </p>
+                    </div>
+                    <div class="section-four__right">
+                        <h2 class="section-four__h2 section-four__h2_right">Категория 1</h2>
+                        <h3 class="section-four__h3 section-four__h3_right">ITAM&SAMDay – самая настоящая удача!</h3>
+                        <p class="section-four__date section-four__date_right">13 дек 2020</p>
+                    </div>
+                </section>
+                <section class="section-five">
+                    <div class="section-five__left">
+                        <h2 class="section-five__h2 section-five__h2_left">Очень длинная категория 2</h2>
+                        <h3 class="section-five__h3 section-five__h3_left">Управление ИТ-активами – скучная рутина или
+                            творческая задача?
+                        </h3>
+                        <p class="section-five__date section-five__date_left">13 дек 2020</p>
+                    </div>
+                    <div class="section-five__top">
+                        <h2 class="section-five__h2">Категория 1</h2>
+                        <h3 class="section-five__h3">Управление ИТ-активами – скучная рутина
+                            или творческая задача слово слово и еще длинное слово после чего ...</h3>
+                        <p class="section-five__date">13 дек 2020</p>
+                    </div>
+                    <div class="section-five__bottom">
+                        <h2 class="section-five__h2">Категория 1</h2>
+                        <h3 class="section-five__h3">УITAM&SAMDay – самая настоящая удача!
+                        </h3>
+                        <p class="section-five__date">13 дек 2020</p>
+                    </div>
+                </section>
+                <button class="main-content__button">
+                    Показать ещё 6
+                </button>
+            </article>
+            <section class="pagination">
+                <ul class="pagination__list">
+                    <li class="pagination__item">
+                        <button class="pagination__link active">1</button>
+                    </li>
+                    <li class="pagination__item">
+                        <button class="pagination__link">2</button>
+                    </li>
+                    <li class="pagination__item">
+                        <button class="pagination__link">3</button>
+                    </li>
+                    <li class="pagination__item">
+                        <button class="pagination__link">4</button>
+                    </li>
+                    <li class="pagination__item">
+                        <button class="pagination__link">...</button>
+                    </li>
+                    <li class="pagination__item">
+                        <button class="pagination__link">10</button>
+                    </li>
+                    <li class="pagination__item">
+                        <button class="pagination__link pagination__link_next">
+                            Следующая
+                            <svg class="pagination__link-svg">
+                                <use xlink:href="./img/svg/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content container">
+            <a class="footer__logo" href="" title="На главную">
+                <svg class="footer__logo-svg">
+                    <use xlink:href="./img/svg/sprite.svg#logo"></use>
+                </svg>
+            </a>
+            <nav class="footer-nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="" class="footer__link">О нас</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Галерея</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Новости</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="" class="footer__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer-copyright">ООО “Организация” 2020. Все права защищены</div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

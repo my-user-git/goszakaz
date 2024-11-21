@@ -1,0 +1,204 @@
+@mixin section-h2 {
+    grid-area: h2;
+    justify-self: flex-start;
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    font-family: var(--font-book), var(--font-standart);
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 400;
+    color: var(--blue-dd);
+    border-radius: 8px;
+    background-color: var(--grey-fd);
+}
+
+@mixin section-grid {
+    display: grid;
+    grid-template-areas:
+        "h2 date"
+        "h3 h3"
+        "desc desc";
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    padding: 40px 40px 52px 40px;
+    border-radius: 20px;
+    background-color: var(--white);
+
+}
+
+@mixin section-in {
+
+    &__h2 {
+        @include section-h2;
+    }
+
+    &__h3 {
+        grid-area: h3;
+        font-family: var(--font-medium);
+        font-size: 24px;
+        line-height: normal;
+        font-weight: 500;
+        color: var(--dark-22);
+    }
+
+    &__date {
+        grid-area: date;
+        justify-self: flex-end;
+        font-family: var(--font-book);
+        font-size: 16px;
+        line-height: normal;
+        font-weight: 400;
+        color: var(--text-grey-4);
+    }
+
+    &__desc {
+        grid-area: desc;
+        font-family: var(--font-book);
+        font-size: 18px;
+        line-height: normal;
+        font-weight: 400;
+        color: var(--text-grey-4);
+    }
+}
+
+@mixin section-right {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 30.769%);
+    column-gap: 40px;
+    @include section-in;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr minmax(auto, 30.612%);
+    }
+
+    &__right {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+        row-gap: 30px;
+        padding: 30px 30px 40px 30px;
+        border-radius: 20px;
+        background-color: var(--blue-dd);
+    }
+
+    &__h2 {
+        &_right {
+            grid-area: inherit;
+            align-self: flex-start;
+            color: var(--white);
+            background-color: var(--blue-e4);
+        }
+    }
+
+    &__h3 {
+        &_right {
+            grid-area: inherit;
+            align-self: flex-start;
+            color: var(--white);
+        }
+    }
+
+    &__date {
+        &_right {
+            grid-area: inherit;
+            align-self: flex-end;
+            justify-self: flex-start;
+            color: var(--white);
+        }
+    }
+}
+
+@mixin section-left {
+    display: grid;
+    grid-template-areas:
+        "left top"
+        "left bottom";
+    grid-template-columns: minmax(auto, 30.769%) 1fr;
+    grid-template-rows: min-content;
+    gap: 40px;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: minmax(auto, 30.612%) 1fr;
+    }
+
+    &__left {
+        grid-area: left;
+        display: grid;
+        grid-template-areas:
+            "h2"
+            "h3"
+            "date";
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+        row-gap: 30px;
+        padding: 40px 30px 40px 30px;
+        background: url('../img/section-three-bg.jpg') center center no-repeat transparent;
+        background-size: cover;
+        border-radius: 20px;
+    }
+
+    &__h2 {
+        &_left {
+            align-self: flex-start;
+            background-color: var(--bg-opacity);
+        }
+    }
+
+    &__h3 {
+        &_left {
+            align-self: flex-start;
+            color: var(--white);
+        }
+    }
+
+    &__date {
+        &_left {
+            align-self: flex-end;
+            justify-self: flex-start;
+            color: var(--white);
+        }
+    }
+
+    &__top {
+        grid-area: top;
+        @include section-grid;
+    }
+
+    &__bottom {
+        grid-area: bottom;
+        @include section-grid;
+    }
+}
+
+/* UI */
+
+@mixin section-hover {
+    cursor: pointer;
+    transition: box-shadow ease-in-out .5s, background-color ease-in-out .5s;
+
+    &:hover,
+    &:focus {
+        box-shadow: 4px 8px 40px 0 var(--section-shadow);
+    }
+}
+
+@mixin h2-hover {
+    &__h2 {
+        transition: background-color ease-in-out .5s;
+
+        &:hover {
+            background-color: var(--blue-opacity-15);
+        }
+    }
+}
+
+@mixin after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    transition: border ease-in-out .5s;
+}
