@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('.main-content__button').addEventListener('click', function () {
+    document.querySelector('.main-content__button').addEventListener('click', function (event) {
+        event.preventDefault();
         const windowInnerWidth = window.innerWidth;
-        document.querySelectorAll('.main-content__article section').forEach(item => {
+        let arrSections = document.querySelectorAll('.main-content__article section');
+        console.log(arrSections);
+        arrSections.forEach(item => {
             const hidden = getComputedStyle(item);
             if (hidden.display === 'none') {
                 if (windowInnerWidth <= 600) {
@@ -11,5 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         })
+        arrSections[3].scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
     })
 })

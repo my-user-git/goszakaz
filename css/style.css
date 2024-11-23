@@ -233,7 +233,6 @@ html,
 body {
   position: relative;
   background-color: var(--grey-f9);
-  overflow-x: hidden;
 }
 
 a {
